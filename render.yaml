@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: telegram-gemini-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 7845413014:AAHO81Yh_uF6ndyTHxlAH5-LnCTb5JOEkE0
+      - key: GEMINI_API_KEY
+        value: AIzaSyAdjBQriKrIJZlhgSZD-KcFCKCIh9kIrSY
+
